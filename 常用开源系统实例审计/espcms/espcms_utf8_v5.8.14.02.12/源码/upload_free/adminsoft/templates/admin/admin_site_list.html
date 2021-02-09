@@ -1,0 +1,35 @@
+[%if count($array) > 0%]
+[%forlist from=$array key=list%]
+<div class="infolist" onselectstart="return false;" title="[%$array[list].sitename%]" [%if @this->powercheck('system','siteedit')==true %] ondblClick="javascript:parent.onbotton('[%$ST.sitemain_edit_title%]','index.php?archive=sitemain&action=edit&slid=[%$array[list].slid%]&freshid='+Math.random()+'&iframename='+self.frameElement.getAttribute('name'),false);"[%/if%]>
+	<table border="0" style="border-collapse:collapse" width="100%" bordercolor="#FFFFFF">
+		<tr>
+			<td width="5%"><input type="checkbox" name="selectinfoid" value="[%$array[list].slid%]"></td>
+			<td width="10%">
+				<input type="hidden" name="infoid" id="infoid" value="[%$array[list].slid%]">
+				<input type="text" name="pid" size="3" value="[%$array[list].pid%]" class="infoInput"  onclick="if(this.value=='[%$array[list].pid%]'){this.value = '';}else {this.select();}" onblur="if(this.value ==''){this.value ='[%$array[list].pid%]';}">
+			</td>
+			<td width="10%">[%$array[list].slid%]</td>
+			<td width="40%">[%$array[list].sitename%]</td>
+			<td width="35%" id="infotype">
+				<table>
+					<tr>
+						[%if @this->powercheck('system','siteedit')==true %]
+						<td><a class="setedit3" onclick="javascript:parent.onbotton('[%$ST.sitemain_edit_title%]','index.php?archive=sitemain&action=edit&slid=[%$array[list].slid%]&freshid='+Math.random()+'&iframename='+self.frameElement.getAttribute('name'),false);" href="#body" title="[%$ST.sitemain_edit_title%]" hidefocus="true">[%$ST.sitemain_edit_title%]</a></td>
+						<td class="padding-left3"><a class="setedit3" target="_blank" href="[%$array[list].link%]" title="[%$ST.sitemain_call_title%]" hidefocus="true">[%$ST.sitemain_call_title%]</a></td>
+						[%/if%]
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+[%/forlist%]
+[%else%]
+<div class="infolist">
+	<table border="0" style="border-collapse:collapse" width="100%" bordercolor="#FFFFFF">
+		<tr>
+			<td align="center">[%$ST.list_nothing_title%]</td>
+		</tr>
+	</table>
+</div>
+[%/if%]

@@ -1,0 +1,47 @@
+*****************************************************************
+*      易思ESPCMS企业网站管理系统 V5  安装相关说明            *
+*****************************************************************
+
+一、运行环境需求：
+	PHP+MYSQL。
+	服务器与主机环境：Linux / Unix / Windows 2000 / XP / Vista / 2003 / 2008 （推荐 Linux / Unix / Windows 2003 / Windows 2008）
+	浏览器：IE6/7/8, Firefox, Chrome, Opera, Safari
+	数据库：MySql 5.0 / 5.1 / 5.1.4 / 5.1.5
+	WEB服务器：Apach / IIS5 / IIS 6 / IIS 7
+	PHP版本： PHP 5.1.10 / PHP 5.2.13 / PHP 5.3.2
+
+二、安装步骤：
+
+	1、Linux 或 Freebsd 服务器下安装方法。
+    		第一步：使用ftp工具中的二进制模式，将该软件包里的 upload 目录及其文件上传到您的空间，假设上传后目录仍旧为 upload。
+		第二步：先确认以下目录或文件属性为 (777) 可写模式。
+        		datacache
+               		静态网页生成目录,默认html/，请您根据您的目录进行修改
+			upfile
+			install/templates_c
+			sitemap
+			注意：请设置相关子分类具有读写权限；
+
+    		第三步：运行 http://website/upload/ 安装程序，填入安装相关信息与资料，完成安装！
+
+	2、Windows 服务器下安装方法。
+    		第一步：使用ftp工具，将该软件包里的 upload 目录及其文件上传到您的空间，假设上传后目录仍旧为 upload。
+    		第二步：运行 http://website/upload/ 安装程序，填入安装相关信息与资料，完成安装！
+
+三、管理网站:
+
+    网站管理后台：http://website/upload/adminsoft/
+    模板目录：upload/templates
+
+四、安全说明：为保证系统安全，请安装成功后，删除install/目录!
+
+如您有任何系统使用问题，欢迎您登陆官网进行咨询了解！
+尔创网联(EarcLink)
+-------------------------------------------------------------------------------------
+授权及售前支持：QQ：6326420   （仅接受合作、商业授权咨询、销售咨询）
+技术支持 E-mail:admin@ecisp.cn （本邮件只限于商业用户）
+使用解答 E-mail:service@ecisp.cn （本邮件用于问题解答、建站报价、合作伙伴服务）
+开发者邮件 E-mail:bili@ecisp.cn （本邮件接收用于商业合作、开发者交流邮件）
+论坛交流 http://bbs.ecisp.cn
+官网支持 http://www.ecisp.cn
+演示站点 http://demo.ecisp.cn

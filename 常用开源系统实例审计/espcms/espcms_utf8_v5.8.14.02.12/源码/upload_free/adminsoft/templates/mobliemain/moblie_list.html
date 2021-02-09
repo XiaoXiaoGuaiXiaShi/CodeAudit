@@ -1,0 +1,30 @@
+[%if count($array) > 0%]
+[%forlist from=$array key=list%]
+<div class="infolist" title="[%$array[list].mobliename%]" onselectstart="return false;">
+	<table border="0" style="border-collapse:collapse" width="100%" bordercolor="#FFFFFF">
+		<tr>
+			<td width="5%"><input type="checkbox" name="selectinfoid" value="[%$array[list].moblid%]"></td>
+			<td width="10%">[%$array[list].moblid%]</td>
+			<td width="30%">[%$array[list].moblienb%]</td>
+			<td width="30%">[%$array[list].mobliename%]</td>
+			<td width="15%">[%$array[list].addtime|timeformat(3)%]</td>
+			<td width="10%" id="infotype">
+				<table>
+					<tr>
+						<td>[%if $array[list].isclass==1%]<span class="audit_ok" title="[%$ST.article_audit_ok%]"></span>[%else%]<span class="audit_no" title="[%$ST.article_audit_no%]"></span>[%/if%]</td>
+					</tr>
+				</table>
+			</td>
+		</tr>
+	</table>
+</div>
+[%/forlist%]
+[%else%]
+<div class="infolist">
+	<table border="0" style="border-collapse:collapse" width="100%" bordercolor="#FFFFFF">
+		<tr>
+			<td align="center">[%$ST.list_nothing_title%]</td>
+		</tr>
+	</table>
+</div>
+[%/if%]
